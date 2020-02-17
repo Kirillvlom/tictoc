@@ -1,0 +1,105 @@
+<!DOCTYPE>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=0">
+	<meta name="theme-color" content="#33304b">
+	<title>Крестики нолики</title>
+	<link rel="stylesheet" href="style.css?v=1.7">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<script src="script.js?v=2.0"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-85966685-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-85966685-1');
+	</script>
+</head>
+
+<body>
+	<div class="main">
+		<div class="select-mode" id="select-mode">
+			<input type="checkbox" id="switcher-2">
+			<label for="switcher-2"></label>
+		</div>
+		<div class="main-block">
+			<div class="block-game">
+				<div class="block-game-over">
+					<div class="game-over" id="game-over"></div>
+					<div id="dead-heat">Ничья</div>
+				</div>
+				<div class="block-game-field" id='game-field'></div>
+			</div>
+			<div class="block-dop-info">
+				<div class="dop-info">
+					<div class="score">
+						<div class="info-title">
+							Счет
+						</div>
+						<div class="resut-score">
+							<div class="score-user">Игрок</div>
+							<div class="score-computer">Комп</div>
+						</div>
+						<div class="resut-score">
+							<div class="score-user" id='score-user'>0</div>
+							<div class="score-computer" id='score-computer'>0</div>
+						</div>
+						<div class="info-title">
+							Раунд
+						</div>
+						<div class="info-raund">
+							<span id='raund'>1</span>
+							<span> / </span>
+							<span id='max-raund'> 3</span>
+						</div>
+						<div class="info-title">
+							За кого играем?
+						</div>
+						<div class="info-select" id='select-user'>
+							<div class="alert-select">Выбрать</div>
+							<input type="radio" name="select" id="select-x" value="1">
+							<input type="radio" name="select" id="select-o" value="2">
+							<label for="select-x" class='select-user' id='select-user-x' data-select="x">
+								<div class="x"></div>
+							</label>
+							<label for="select-o" class='select-user' id='select-user-o' data-select="o">
+								<div class="o"></div>
+							</label>
+						</div>
+					</div>
+					<div class="result">
+						<div class="info-title clear">
+							История игр <span id='result-clear'>
+								<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"
+									id='icon-clear'>
+									<path d="M5 13h14v-2H5v2zm-2 4h14v-2H3v2zM7 7v2h14V7H7z" />
+									<path d="M0 0h24v24H0z" fill="none" /></svg>
+							</span>
+						</div>
+						<div class="resut-player">
+							<div class="player-serial">№</div>
+							<div class="player-user">Игрок</div>
+							<div class="player-computer">Комп</div>
+						</div>
+						<div class="result-content"></div>
+					</div>
+				</div>
+				<div class="restart">
+					<button class='reboot' id='reboot'>Заново</button>
+				</div>
+			</div>
+			
+		</div>
+		<a href="https://jooit.ru" class='jooit-header'>Jooit.ru</a>
+	</div>
+	
+</body>
+
+</html>
